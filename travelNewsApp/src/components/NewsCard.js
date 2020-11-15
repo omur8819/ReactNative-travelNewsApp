@@ -1,5 +1,11 @@
 import React from 'react';
-import {Text, View, Image, Dimensions, StyleSheet} from 'react-native';
+import { View, 
+         Text, 
+         Image, 
+         StyleSheet, 
+         Dimensions, 
+         TouchableOpacity, 
+         Linking } from 'react-native';
 
 const NewsCard = ({props}) => {
     return (
@@ -10,6 +16,12 @@ const NewsCard = ({props}) => {
           />
             <Text style={myStyle.title}>{props.title}</Text>
             <Text style={myStyle.desc}>{props.description}</Text>
+            <TouchableOpacity
+                style={myStyle.button}
+                onPress={() => Linking.openURL(props.inspect)}>
+                <Text style={{color: 'wheat', textAlign: 'center', fontWeight: 'bold', marginTop: 4}}>Inspect The New</Text>
+            </TouchableOpacity>
+
         </View>
     )
 }
