@@ -40,7 +40,7 @@ const myStyle = StyleSheet.create({
     },
     image: {
         width: Dimensions.get("window").width*0.80,
-        height: Dimensions.get("window").height*0.35,
+        height: Dimensions.get("window").height*0.25,
         borderRadius: 5
         
     },
