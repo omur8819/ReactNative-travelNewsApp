@@ -19,7 +19,7 @@ const NewsCard = ({props}) => {
             <TouchableOpacity
                 style={myStyle.button}
                 onPress={() => Linking.openURL(props.inspect)}>
-                <Text style={{color: 'wheat', textAlign: 'center', fontWeight: 'bold', marginTop: 4}}>Inspect The New</Text>
+                <Text style={{color: 'white', textAlign: 'center', fontWeight: 'bold', marginTop: 4}}>Inspect The New</Text>
             </TouchableOpacity>
 
         </View>
@@ -40,8 +40,7 @@ const myStyle = StyleSheet.create({
     },
     image: {
         width: Dimensions.get("window").width*0.80,
-        height: Dimensions.get("window").height*0.25,
-        resizeMode:"contain",
+        height: Dimensions.get("window").height*0.35,
         borderRadius: 5
         
     },
@@ -54,5 +53,16 @@ const myStyle = StyleSheet.create({
     desc: {
         fontSize: 16,
         textAlign: 'center',
+    },
+    button: {
+        marginTop: 10,
+        backgroundColor: '#e6ee9c',
+        width: 200,
+        height: 30,
+        alignSelf: 'center',
+        borderRadius: 10,
+
+
+
     },
 })
